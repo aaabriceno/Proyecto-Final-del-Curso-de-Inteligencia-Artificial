@@ -40,7 +40,7 @@ Estos 4 tokens son la secuencia de entrada del Transformer.
 
 ---
 
-## 🧩 Arquitectura del modelo
+##  Arquitectura del modelo
 
 ### 1. TokenEmbedding (`transformer.h`)
 Convierte cada uno de los 4 tokens en un vector de dimensión `d_model = 64`:
@@ -137,7 +137,7 @@ En resumen: el servidor construye un modelo global a partir del promedio de los 
 
 ---
 
-## ▶ Cómo compilar y ejecutar
+##  Cómo compilar y ejecutar
 
 Compilación básica (ejemplo):
 
