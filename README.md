@@ -1,10 +1,10 @@
-# 🧠 Transformer Federado para Análisis de Tráfico de Red
+#  Transformer Federado para Análisis de Tráfico de Red
 **Proyecto del curso de Inteligencia Artificial (C++)**  
 **Integrantes:** Paolo Jesús Mostajo Alor · Alexander Carpio Mamani · Anthony Briceño Quiroz
 
 ---
 
-## 🚩 Problema
+##  Problema
 Los sistemas de detección de intrusos (IDS) necesitan grandes volúmenes de tráfico de red para entrenar modelos robustos. Centralizar esos datos:
 - puede ser **costoso** y **lento**,
 - **afecta la privacidad**,
@@ -12,7 +12,7 @@ Los sistemas de detección de intrusos (IDS) necesitan grandes volúmenes de tr�
 
 ---
 
-## 💡 Enfoque propuesto
+##  Enfoque propuesto
 Implementamos un **modelo tipo Transformer** para la detección de ataques en el dataset **NSL‑KDD**, y lo usamos en un esquema de **aprendizaje federado**:
 
 - Cada cliente entrena localmente un pequeño **MLP en CUDA** sobre la representación generada por el Transformer.
@@ -26,7 +26,7 @@ Implementamos un **modelo tipo Transformer** para la detección de ataques en el
 
 ---
 
-## 📊 Dataset: NSL‑KDD
+##  Dataset: NSL‑KDD
 - Dataset clásico para detección de intrusiones.  
 - En este proyecto se utilizan los archivos:
   - `NSL_KDD-master/KDDTrain+.txt`
