@@ -139,28 +139,9 @@ En resumen: el servidor construye un modelo global a partir del promedio de los 
 
 ##  Cómo compilar y ejecutar
 
+Cómo compilar y ejecutar
 Compilación básica (ejemplo):
 
-```bash
-nvcc transformer.cu -o transformer -std=c++17
-nvcc average.cu     -o average    -std=c++17
-```
-
-1. **Entrenamiento centralizado**  
-   ```bash
-   ./transformer
-   ```
-   Esto entrena el modelo en `KDDTrain+.txt`, evalúa en `KDDTest+.txt` y genera `mlp_model.bin`.
-
-2. **Escenario federado (3 clientes)**
-   - Entrena el MLP en 3 entornos distintos (por ejemplo, 3 Colabs) y guarda:
-     - `mlp_model_1.bin`, `mlp_model_2.bin`, `mlp_model_3.bin`.
-   - Copia esos archivos al directorio del proyecto.
-   - Ejecuta:
-     ```bash
-     ./average
-     ```
-   - El programa calculará el promedio de los pesos y mostrará la **accuracy final (ensemble federado)**.
-
+usar el finalTransformer.ipynb en 3 colabs diferentes, donde se entrenaran 3 veces el modelo transformer.cu, luego descargar el mlp_model.bin y cambiarle a mlp_model_1.bin, y asi sucevivamente con los 3 modelos, mlp_model_2.bin y mlp_model_3.bin. Luego subir a cualquier .ipynb esos 3 puntos bin, y correr el average.cu, y se verá el desempeño colaborativo de los 3 modelos, y como mejora.
 ---
 
